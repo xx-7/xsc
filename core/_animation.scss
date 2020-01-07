@@ -1,1 +1,50 @@
 @charset "UTF-8";
+
+
+@mixin transition($property, $duration, $timing-function, $delay){
+    -webkit-transition: $property $duration $timing-function $delay;
+    -o-transition: $property $duration $timing-function $delay;
+    transition: $property $duration $timing-function $delay;
+  }
+
+
+@mixin transform-scale($scale){
+    -webkit-transform: scale($scale);
+    -ms-transform: scale($scale);
+    transform: scale($scale);
+    opacity: $scale;
+}
+
+@mixin transform-rotate($rotate){
+    -webkit-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+}
+
+
+@mixin keyframes-transform-rotate($name, $times, $angles){
+    @keyframes #{$name} {
+        @for $index from 1 to length($times)+1 {
+            #{nth($times, $index)} {
+                @include transform-rotate(nth($angles, $index));
+            }
+        }
+    }
+    @-webkit-keyframes #{$name} {
+        @for $index from 1 to length($times)+1 {
+            #{nth($times, $index)} {
+                @include transform-rotate(nth($angles, $index));
+            }
+        }
+    }
+}
+
+@mixin transform-origin($params) {
+    -webkit-transform-origin: #{$params};
+    -ms-transform-origin: #{$params};
+    transform-origin:  #{$params};
+}
+
+@mixin animation($params) {
+    -webkit-animation: #{$params};
+    animation: #{$params};
+}

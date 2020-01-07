@@ -1,1 +1,15 @@
 @charset "UTF-8";
+
+
+
+@mixin element-order($group, $order){
+    -webkit-box-ordinal-group: $group;
+    -ms-flex-order: $order;
+    order: $order;
+}
+
+@mixin box-shadow($h-shadow, $v-shadow, $blur, $spread, $color, $opacity) {
+    -webkit-box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity)!important ;
+    box-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity)!important ;
+    
+  }

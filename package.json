@@ -1,0 +1,26 @@
+{
+  "name": "xsc",
+  "version": "1.0.1",
+  "description": "scss library",
+  "keywords": [
+    "scss"
+  ],
+  "homepage": "https://github.com/xx-7/xsc",
+  "bugs": {
+    "url": "https://github.com/xx-7/xsc/issues"
+  },
+  "author": "xx-7",
+  "maintainers": [
+    "xx-7"
+  ],
+  "contributors": [
+    "xx-7 (https://github.com/xx-7)"
+  ],
+  "files": [
+    "_core.scss",
+    "core/",
+    "README.md"
+  ],
+  "devDependencies": {},
+  "license": "MIT"
+}
